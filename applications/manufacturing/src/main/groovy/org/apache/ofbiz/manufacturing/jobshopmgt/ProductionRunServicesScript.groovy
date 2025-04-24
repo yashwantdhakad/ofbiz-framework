@@ -122,9 +122,9 @@ Map issueProductionRunTaskComponent() {
                         'fromDate', parameters.fromDate,
                         'workEffortGoodStdTypeId', 'PRUNT_PROD_NEEDED')
                 .queryOne()
-        productId = workEffortGoodStandard.productId
+        productId = workEffortGoodStandard?.productId
         if (!parameters.quantity) {
-            estimatedQuantity = workEffortGoodStandard.estimatedQuantity
+            estimatedQuantity = workEffortGoodStandard?.estimatedQuantity
         }
 
         if (!productId) {
